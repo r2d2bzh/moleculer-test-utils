@@ -6,8 +6,8 @@ services:
     build:
       context: .
       args:
-        UID: ${UID}
-        GID: ${GID}
+        UID: ${UID:-1001}
+        GID: ${GID:-1001}
     volumes:
       - .:/home/user/dev
     entrypoint:
