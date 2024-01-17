@@ -1,0 +1,46 @@
+{
+  "name": "moleculer-test-utils",
+  "version": "0.0.0",
+  "description": "Some useful functions for moleculer unit testing",
+  "main": "lib/index.js",
+  "type": "module",
+  "scripts": {
+    "pretest": "npm install",
+    "lint": "eslint .",
+    "test": "docker compose run test",
+    "test:docker": "c8 ava",
+    "release": "release-it"
+  },
+  "author": "r2d2bzh",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "moleculer": "^0.14.32",
+    "mongodb": "^6.3.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@r2d2bzh/js-rules": "^1.0.4",
+    "ava": "^6.0.1",
+    "c8": "^9.1.0",
+    "release-it": "^17.0.1"
+  },
+  "c8": {
+    "check-coverage": true,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
+    "all": true,
+    "allowExternal": true,
+    "src": [
+      "./lib"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}

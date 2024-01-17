@@ -1,0 +1,1 @@
+FROM ghcr.io/r2d2bzh/docker-build-nodejs-devenv:2.0.6

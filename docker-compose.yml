@@ -1,0 +1,19 @@
+services:
+  mongo:
+    image: mongo:latest
+
+  test:
+    build:
+      context: .
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    volumes:
+      - .:/home/user/dev
+    entrypoint:
+      - npm
+      - run
+    command:
+      - test:docker
+    depends_on:
+      - mongo

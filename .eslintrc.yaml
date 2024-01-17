@@ -1,0 +1,5 @@
+extends:
+- '@r2d2bzh'
+settings:
+  import/core-modules:
+  - ava
