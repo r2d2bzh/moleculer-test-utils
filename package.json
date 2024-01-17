@@ -1,6 +1,6 @@
 {
   "name": "moleculer-test-utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Some useful functions for moleculer unit testing",
   "main": "lib/index.js",
   "type": "module",
