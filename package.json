@@ -1,6 +1,6 @@
 {
   "name": "@r2d2bzh/moleculer-test-utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Some useful functions for moleculer unit testing",
   "main": "lib/index.js",
   "type": "module",
