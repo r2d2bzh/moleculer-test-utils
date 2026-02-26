@@ -20,3 +20,18 @@ test('runbroker must start a moleculer broker with some services', async (t) => 
   t.assert((await broker.call('test.my-action')) === 'This is a test');
   await broker.stop();
 });
+
+test('runbroker must throw an error if service started method throw an error', async (t) => {
+  await t.throwsAsync(
+    runBroker({
+      services: [
+        {
+          name: 'test',
+          async started() {
+            throw new Error('Start failed');
+          },
+        },
+      ],
+    }),
+  );
+});
