@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    "skipLibCheck": true,
+    "rootDir": "lib",
+    "declarationDir": "lib"
+  },
+  "include": [
+    "lib/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib/**/*.d.ts"
+  ]
+}

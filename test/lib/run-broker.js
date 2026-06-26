@@ -1,16 +1,14 @@
 import test from 'ava';
 import { runBroker } from '../../lib/index.js';
 
-test('runbroker must start a moleculer broker with some services', async (t) => {
+test('runBroker must start a moleculer broker with some services', async (t) => {
   const broker = await runBroker({
     services: [
       {
         name: 'test',
         actions: {
           'my-action': {
-            handler() {
-              return 'This is a test';
-            },
+            handler: () => 'This is a test',
           },
         },
       },
@@ -21,7 +19,7 @@ test('runbroker must start a moleculer broker with some services', async (t) => 
   await broker.stop();
 });
 
-test('runbroker must throw an error if service started method throw an error', async (t) => {
+test('runBroker must throw an error if service started method throw an error', async (t) => {
   await t.throwsAsync(
     runBroker({
       services: [

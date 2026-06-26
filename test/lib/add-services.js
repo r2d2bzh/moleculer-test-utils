@@ -10,9 +10,7 @@ test('Be able to add services to a running moleculer broker', async (t) => {
         name: 'test',
         actions: {
           'my-action': {
-            handler() {
-              return 'This is a test';
-            },
+            handler: () => 'This is a test',
           },
         },
       },

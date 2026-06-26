@@ -1,1 +1,1 @@
-FROM ghcr.io/r2d2bzh/docker-build-nodejs-devenv:3.0.0
+FROM ghcr.io/r2d2bzh/docker-build-nodejs-devenv:3.4.0
